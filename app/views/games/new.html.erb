@@ -1,12 +1,17 @@
-<div>
-  <h1>title</h1>
+<div class="container">
   <div>
-    <h2>grid</h2>
-  </div>
-  <div>
-    <form action="/score" method= "post">
-      <input type="text" name="attempt">
-      <input type="submit" value="GO!">
-    </form>
-  </div>
+    <h1>New Game</h1>
+    <p>Write the longest word you can find as fast as possible</p>
+      <ul>
+        <%@letters.each do|letter| %>
+        <li><%=letter%></li>
+        <%end %>
+      </ul>
+    </div>
+    <div>
+      <form action="/score" method= "post">
+        <input type="text" name="attempt">
+        <input type="submit" value="GO!">
+      </form>
+    </div>
 </div>
